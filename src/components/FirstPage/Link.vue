@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8 flex items-center justify-center">
+  <div class="flex items-center justify-center py-8 sm:p-8">
     <div class="w-full max-w-lg mr-4">
       <label for="link" class="sr-only">Ссылка на пост</label>
       <input
@@ -7,10 +7,10 @@
         type="url"
         name="link"
         id="link"
-        class="shadow-sm focus:ring-gray-500 focus:border-gray-500 block w-full sm:text-md border-gray-300 rounded-md"
+        class="block w-full text-sm border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500 sm:text-md"
         placeholder="https://www.tinkoff.ru/invest/social/profile/<ваше имя>..."
       />
-      <p v-if="error" class="mt-2 text-sm text-red-600">
+      <p v-if="error" class="mt-2 text-xs text-red-600">
         {{ error }}
       </p>
     </div>

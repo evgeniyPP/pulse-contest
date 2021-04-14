@@ -1,6 +1,6 @@
 <template>
   <button
-    class="inline-flex items-center p-2 border border-transparent rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+    class="inline-flex items-center p-1 text-white bg-indigo-600 border border-transparent rounded-full shadow-sm hover:bg-indigo-700 sm:p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
     :disabled="isDisabled"
   >
     <svg
@@ -9,7 +9,7 @@
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 320 512"
-      class="h-6 w-6"
+      class="w-6 h-6"
     >
       <path
         fill="currentColor"

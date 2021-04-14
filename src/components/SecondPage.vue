@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-8 max-w-2xl lg:mx-auto">
+  <div class="max-w-2xl mt-8 sm:mx-auto">
     <p class="mt-3 text-xl text-gray-500 sm:mt-4">Всего участие приняли:</p>
     <Card :count="participants.length" :label="human" class="my-10" />
     <button
-      class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      class="block px-6 py-3 mx-auto text-base font-medium text-center text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
     >
       Разыграть
     </button>
