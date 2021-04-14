@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { error, loadParticipants } from '../../store/global';
+import { error, loadParticipants } from '../../store';
 import Button from './Button.vue';
 
 const url = ref('');

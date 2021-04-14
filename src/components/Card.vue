@@ -1,14 +1,18 @@
 <template>
-  <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
-    <dl class="rounded-lg shadow-lg">
+  <div
+    :class="{ [`max-w-${width}`]: true }"
+    class="max-w-md px-4 mx-auto sm:px-6 lg:px-8"
+  >
+    <dl :class="{ 'shadow-lg': shadow }" class="rounded-lg">
       <div
-        class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l"
+        :class="{ 'border-t border-gray-100': shadow }"
+        class="flex flex-col p-6 text-center"
       >
-        <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+        <dt class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
           {{ label }}
         </dt>
         <dd class="order-1 text-5xl font-extrabold text-indigo-600">
-          {{ count }}
+          {{ value }}
         </dd>
       </div>
     </dl>
@@ -19,7 +23,14 @@
 import { defineProps } from 'vue';
 
 defineProps({
-  count: Number,
-  label: String,
+  value: String | Number,
+  label: {
+    type: String,
+    default: null,
+  },
+  shadow: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>

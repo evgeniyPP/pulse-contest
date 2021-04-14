@@ -10,6 +10,7 @@
         </h1>
         <FirstPage v-if="page === 1" />
         <SecondPage v-else-if="page === 2" />
+        <ThirdPage v-else-if="page === 3" />
       </div>
     </div>
   </div>
@@ -18,5 +19,6 @@
 <script setup>
 import FirstPage from './components/FirstPage/FirstPage.vue';
 import SecondPage from './components/SecondPage.vue';
-import { page } from './store/global';
+import ThirdPage from './components/ThirdPage.vue';
+import { page } from './store';
 </script>
