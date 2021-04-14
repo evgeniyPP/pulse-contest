@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-2xl mt-8 sm:mx-auto">
-    <p class="mt-3 text-xl text-gray-500 sm:mt-4">Поздравляем</p>
+    <p class="mt-3 text-xl text-gray-500 sm:mt-4">Выиграл</p>
     <Card :value="winner" class="my-6" />
     <button
       v-if="participants.length > 1"

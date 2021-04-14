@@ -1,6 +1,6 @@
 <template>
-  <img alt="logo" src="./assets/logo.png" class="mx-auto mt-8 sm:mt-16" />
-  <div class="my-8 sm:my-12">
+  <img alt="logo" src="./assets/logo.png" class="mx-auto mt-8 sm:mt-12" />
+  <main class="my-8 sm:my-12">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="sm:text-center">
         <h1
@@ -13,12 +13,35 @@
         <ThirdPage v-else-if="page === 3" />
       </div>
     </div>
-  </div>
+  </main>
+  <Footer />
 </template>
 
 <script setup>
 import FirstPage from './components/FirstPage/FirstPage.vue';
 import SecondPage from './components/SecondPage.vue';
 import ThirdPage from './components/ThirdPage.vue';
+import Footer from './components/Footer.vue';
 import { page } from './store';
 </script>
+
+<style>
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+</style>
