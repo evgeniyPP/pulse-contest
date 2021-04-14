@@ -1,8 +1,5 @@
 <template>
-  <div
-    :class="{ [`max-w-${width}`]: true }"
-    class="max-w-md px-4 mx-auto sm:px-6 lg:px-8"
-  >
+  <div class="max-w-md px-4 mx-auto sm:px-6 lg:px-8">
     <dl :class="{ 'shadow-lg': shadow }" class="rounded-lg">
       <div
         :class="{ 'border-t border-gray-100': shadow }"

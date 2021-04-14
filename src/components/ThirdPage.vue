@@ -1,7 +1,8 @@
 <template>
   <div class="max-w-2xl mt-8 sm:mx-auto">
-    <p class="mt-3 text-xl text-gray-500 sm:mt-4">Выиграл</p>
-    <Card :value="winner" class="my-6" />
+    <p class="mt-3 text-xl text-gray-500 sm:mt-4">И победителем становится</p>
+    <Loader v-if="loading" class="w-full my-6" />
+    <Card v-else :value="winner" class="my-6" />
     <button
       v-if="participants.length > 1"
       @click="retry"
@@ -16,8 +17,16 @@
 </template>
 
 <script setup>
-import { winner, participants, play, error, setParticipants } from '../store';
+import {
+  winner,
+  participants,
+  play,
+  error,
+  loading,
+  setParticipants,
+} from '../store';
 import Card from './Card.vue';
+import Loader from './Loader.vue';
 
 const retry = () => {
   setParticipants(
