@@ -1,7 +1,11 @@
 <template>
   <button
-    class="inline-flex items-center p-1 text-white bg-indigo-600 border border-transparent rounded-full shadow-sm hover:bg-indigo-700 sm:p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
-    :disabled="isDisabled"
+    :class="{
+      'disabled:cursor-not-allowed': isDisabled,
+      'disabled:cursor-wait': loading,
+    }"
+    class="inline-flex items-center p-1 text-white bg-indigo-600 border border-transparent rounded-full shadow-sm hover:bg-indigo-700 sm:p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
+    :disabled="isDisabled || loading"
   >
     <svg
       aria-hidden="true"
@@ -21,6 +25,7 @@
 
 <script setup>
 import { defineProps } from 'vue';
+import { loading } from '../../store';
 
 defineProps({
   isDisabled: {

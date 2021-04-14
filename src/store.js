@@ -44,10 +44,12 @@ export const loadParticipants = async url => {
   }
 
   clearError();
+  setLoading(true);
 
   try {
     const data = await fetchParticipants(url);
     setParticipants(data);
+    setLoading(false);
     setPage(2);
     return true;
   } catch (e) {
