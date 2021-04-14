@@ -1,6 +1,6 @@
 <template>
   <img alt="logo" src="./assets/logo.png" class="mx-auto" />
-  <div class="py-12 bg-white">
+  <div class="py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h1
@@ -8,14 +8,17 @@
         >
           Конкурсы в "Пульс"
         </h1>
-        <FirstPage />
+        <FirstPage v-if="page === 1" />
+        <SecondPage v-else-if="page === 2" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import FirstPage from './components/FirstPage.vue';
+import FirstPage from './components/FirstPage/FirstPage.vue';
+import SecondPage from './components/SecondPage.vue';
+import { page } from './store/global';
 </script>
 
 <style>
