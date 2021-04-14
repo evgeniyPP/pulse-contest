@@ -36,7 +36,7 @@ export const setParticipants = value => {
 };
 
 export const loadParticipants = async url => {
-  const regexp = /(http|https):\/\/www.tinkoff.ru\/invest\/social\/profile\/(.+?)\/.+/;
+  const regexp = /(http|https):\/\/(www\.)?tinkoff\.ru\/invest\/social\/profile\/(.+?)\/.+/;
 
   if (!regexp.test(url)) {
     setError('Неправильный URL. Посмотрите на пример \u2191');
