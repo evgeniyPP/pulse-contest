@@ -26,10 +26,7 @@ const human = computed(() => {
   const penultimateDigit = +digits[digits.length - 2];
 
   if (
-    (lastDigit !== 2 &&
-      lastDigit !== 3 &&
-      lastDigit !== 4 &&
-      !penultimateDigit) ||
+    (lastDigit !== 2 && lastDigit !== 3 && lastDigit !== 4) ||
     penultimateDigit === 1
   ) {
     return 'человек';
